@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Калькулятор</title>
+</head>
+<body>
+
+<h2>Калькулятор (v{{ version }})</h2>
+
+<form method="POST">
+    <input name="a" placeholder="Первое число">
+    <input name="b" placeholder="Второе число">
+
+    <button name="operation" value="add">+</button>
+    <button name="operation" value="sub">-</button>
+    <button name="operation" value="mul">*</button>
+    <button name="operation" value="div">/</button>
+</form>
+
+{% if result is not none %}
+<h3>Результат: {{ result }}</h3>
+{% endif %}
+
+</body>
+</html>
